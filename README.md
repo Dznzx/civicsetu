@@ -2,7 +2,7 @@
 <p align="center"><b>Report. Route. Resolve.</b></p>
 
 <p align="center">
-  <a href="https://civicsetu-sih.vercel.app"><b>Live demo →</b></a>
+  <a href="https://civicsetu-seven.vercel.app"><b>Live demo →</b></a>
 </p>
 
 <p align="center">
