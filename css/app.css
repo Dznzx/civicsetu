@@ -568,7 +568,7 @@
   .feed-item{
     display:flex; align-items:center; gap:14px; padding:14px;
     margin-bottom: 10px;
-    background: #faf8f5;
+    background: var(--surface);
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.8);
     box-shadow:
@@ -631,8 +631,8 @@
   .summary-card .row{
     display:flex; align-items:center; justify-content:space-between;
     padding:12px 14px; margin-bottom:8px;
-    background: #faf8f5; border-radius:14px;
-    box-shadow: inset 1.5px 1.5px 3px #ffffff, inset -1.5px -1.5px 3px rgba(185, 172, 155, 0.18);
+    background: var(--surface); border-radius:14px;
+    box-shadow: var(--clay-shadow-inset);
   }
   .summary-card .row:last-child{ margin-bottom:0; }
   .summary-card .row .lft{ display:flex; align-items:center; gap:10px; font-size:14px; font-weight:700; }
@@ -708,14 +708,14 @@
   .report-body{ display:flex; flex-direction:column; }
   .report-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:10px; font-size:12px; color:var(--muted); margin-bottom:6px; font-weight:600; }
   .report-body h4{ margin:0 0 6px; font-size:16.5px; font-weight:800; }
-  .report-body p{ margin:0 0 10px; font-size:13.5px; color:#4a524e; line-height:1.5; font-weight:500; }
+  .report-body p{ margin:0 0 10px; font-size:13.5px; color:var(--muted); line-height:1.5; font-weight:500; }
   .report-foot{ font-size:12px; color:var(--muted); margin-top:auto; display:flex; align-items:center; gap:6px; font-weight:600; }
   .report-ai-summary{ font-size:12px; color:var(--muted); margin:2px 0 6px; line-height:1.4; }
 
   .load-more{
     width:100%; padding:14px; border-radius:16px;
     border: 2px dashed #cfc9bb;
-    background: #faf8f5; color:var(--muted); font-weight:800; font-size:14px;
+    background: var(--surface); color:var(--muted); font-weight:800; font-size:14px;
     cursor:pointer;
     box-shadow: inset 1.5px 1.5px 4px #ffffff, inset -1.5px -1.5px 4px rgba(185, 172, 155, 0.2);
     transition: all .2s ease;
@@ -738,14 +738,14 @@
     display:flex; align-items:center; gap:10px;
     border: none;
     border-radius: 14px; padding:11px 14px; margin-bottom:14px;
-    background: #f1ece2;
+    background: var(--surface);
     box-shadow: var(--clay-shadow-inset);
   }
   .search-box input{ border:none; outline:none; flex:1; font-size:14px; background:transparent; font-family:var(--font); font-weight:600; }
   .map-item{
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 16px; padding:14px; margin-bottom:12px; cursor:pointer;
-    background: #faf8f5;
+    background: var(--surface);
     box-shadow:
       0 4px 10px -2px rgba(60, 50, 40, 0.08),
       inset 2px 2px 4px #ffffff,
@@ -760,7 +760,7 @@
   .map-item-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
   .map-item-top strong{ font-size:14.5px; font-weight:800; }
   .map-item .loc{ font-size:12px; color:var(--muted); margin:4px 0 6px; font-weight:600; }
-  .map-item p{ font-size:13px; margin:0 0 8px; color:#4a524e; line-height:1.45; font-weight:500; }
+  .map-item p{ font-size:13px; margin:0 0 8px; color:var(--muted); line-height:1.45; font-weight:500; }
   .map-item .foot{ font-size:11.5px; color:var(--muted); font-weight:600; }
 
   .map-canvas{
@@ -857,7 +857,7 @@
   .ba-box img{ width:100%; height:200px; object-fit:cover; display:block; }
   .ba-empty{
     height:200px; display:flex; flex-direction:column; align-items:center; justify-content:center;
-    gap:10px; color:var(--muted); background:#f4f0e6; font-weight:600;
+    gap:10px; color:var(--muted); background:var(--surface); font-weight:600;
     box-shadow: inset 2px 2px 6px rgba(0,0,0,0.06), inset -2px -2px 6px #fff;
   }
   .ba-label{ padding:11px 16px; font-size:13px; font-weight:800; border-top:1px solid var(--line); color:var(--muted); }
@@ -865,7 +865,7 @@
   .timeline{ list-style:none; margin:0; padding:0; position:relative; }
   .timeline li{ position:relative; padding:0 0 28px 44px; }
   .timeline li:last-child{ padding-bottom:0; }
-  .timeline li::before{ content:""; position:absolute; left:13px; top:28px; bottom:0; width:3px; background:#ded8c8; border-radius:2px; }
+  .timeline li::before{ content:""; position:absolute; left:13px; top:28px; bottom:0; width:3px; background:var(--line); border-radius:2px; }
   .timeline li:last-child::before{ display:none; }
   .tdot{
     position:absolute; left:0; top:0; width:28px; height:28px; border-radius:50%;
@@ -878,18 +878,18 @@
   .tdot.done{ background: linear-gradient(145deg, #248b57, #155e3a); color:#fff; }
   .tdot.active{ background: linear-gradient(145deg, #e8a93a, #b57e1b); color:#fff; animation:pulse2 1.6s infinite; }
   .tdot.pending{
-    background:#e6e1d5; color:#999;
+    background:var(--line); color:var(--muted);
     box-shadow: inset 2px 2px 4px rgba(0,0,0,0.1), inset -2px -2px 4px #fff;
   }
   @keyframes pulse2{ 0%{box-shadow:0 0 0 0 rgba(201,146,43,.6);} 70%{box-shadow:0 0 0 10px rgba(201,146,43,0);} 100%{box-shadow:0 0 0 0 rgba(201,146,43,0);} }
   .timeline h4{ margin:0 0 4px; font-size:15px; font-weight:800; }
   .timeline .ts{ font-size:12px; color:var(--muted); margin-bottom:6px; font-weight:600; }
   .timeline .note{
-    font-size:13px; color:#4a524e; background:#f4f0e6;
+    font-size:13px; color:var(--muted); background:var(--surface);
     border-radius:12px; padding:9px 14px; margin-top:8px; display:inline-block; font-weight:500;
     box-shadow: inset 1.5px 1.5px 3px rgba(0,0,0,0.06), inset -1.5px -1.5px 3px #fff;
   }
-  .timeline .pending-lbl{ color:#999; font-style:italic; font-size:13px; font-weight:500; }
+  .timeline .pending-lbl{ color:var(--muted); font-style:italic; font-size:13px; font-weight:500; }
 
   .comment{ display:flex; gap:12px; margin-bottom:16px; }
   .avatar{
@@ -903,7 +903,7 @@
       inset -2px -2px 4px rgba(31,122,77,0.15);
   }
   .comment-body{
-    background:#faf8f5; border-radius:16px; padding:12px 16px; flex:1;
+    background:var(--surface); border-radius:16px; padding:12px 16px; flex:1;
     border: 1px solid rgba(255, 255, 255, 0.8);
     box-shadow:
       0 4px 10px -2px rgba(60, 50, 40, 0.06),
@@ -912,12 +912,12 @@
   }
   .comment-body .cname{ font-weight:800; font-size:13.5px; display:flex; justify-content:space-between; }
   .comment-body .cname span{ font-weight:500; color:var(--muted); font-size:11.5px; }
-  .comment-body p{ margin:6px 0 0; font-size:13.5px; line-height:1.5; color:#4a524e; font-weight:500; }
+  .comment-body p{ margin:6px 0 0; font-size:13.5px; line-height:1.5; color:var(--muted); font-weight:500; }
   .comment-input{ display:flex; gap:10px; margin-top:16px; }
   .comment-input textarea{
     flex:1; border: none; border-radius:14px; padding:12px 14px;
     font-family:var(--font); font-size:13.5px; resize:vertical; min-height:48px;
-    background: #f1ece2;
+    background: var(--surface);
     box-shadow: var(--clay-shadow-inset);
     outline: none;
   }
@@ -1409,6 +1409,15 @@
      rule below) — without this, the "fixed to viewport bottom" nav below
      anchors to .topbar's own edge instead, landing back up near the top. */
   .topbar { backdrop-filter: none; -webkit-backdrop-filter: none; }
+
+  /* With .navlinks and .btn-report taken out of flow below (fixed bottom
+     nav / FAB), .nav-right's five 48px icon buttons are the only thing left
+     competing with .brand for the topbar's width. At the 375px demo device
+     width they don't fit on one line and were overflowing both the topbar
+     card and the page itself (real horizontal scroll on the one width
+     DESIGN.md requires citizen views to survive). Wrapping keeps every
+     button at its full 48px touch target instead of shrinking them. */
+  .nav-right{ flex-wrap: wrap; justify-content: flex-end; row-gap: 8px; }
 
   /* Bottom Navigation */
   .navlinks {

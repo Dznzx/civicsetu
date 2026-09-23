@@ -213,6 +213,14 @@ async function escalateReportInner(r){
   }
 }
 setInterval(()=>{
+  // This queue (and its hidden DOM) exists app-wide regardless of which role
+  // view is on screen, but only an authority/officer session can actually
+  // write an escalation — RLS restricts report UPDATEs to the report's own
+  // owner or an authority. Without this guard, a signed-in citizen sits
+  // through the same SLA breach every second, each one silently retried and
+  // rejected by the server, which used to surface as a scary "permission
+  // denied — sign out and back in" toast for something the citizen never did.
+  if(typeof currentUser === 'undefined' || !currentUser || !isOfficerRole(currentUser.role)) return;
   let newBreach = false;
   queueList.querySelectorAll('.sla-countdown').forEach(el=>{
     const report = CIVIC.reports.find(r=>r.id===el.dataset.id);
